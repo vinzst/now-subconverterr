@@ -53,7 +53,7 @@ jobs:
       with:
         author_name: GitHub Action
         author_email: vinzst@qq.com
-        message: "Update sub-web from zhongfly/sub-web"
+        message: "Update sub-web from vinzst/sub-web"
         add: "-A"
       env:
         GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }} 
