@@ -1,8 +1,12 @@
 name: Update subconverter
 
 on:
-  schedule:
-    - cron: 0 */12 * * *
+  workflow_dispatch:
+    inputs:
+      message:
+        description: 'commit message'
+        required: true
+        default: 'Update subconverter'
    
 jobs:
   Build:
@@ -14,7 +18,7 @@ jobs:
     - name: Prepare
       run: |
         rm -rf subconverter
-        git clone https://github.com/tindy2013/subconverter.git
+        git clone https://vinzst:vinzst123@github.com/vinzst/subconverter.git
     - name: Build
       run: docker run -v $GITHUB_WORKSPACE/subconverter:/root/workdir multiarch/alpine:amd64-latest-stable /bin/sh -c "apk add bash git && cd /root/workdir && chmod +x scripts/build.alpine.release.sh && bash scripts/build.alpine.release.sh"
     - name: Clean up
@@ -28,13 +32,16 @@ jobs:
         sudo chmod +x subconverter/subconverter.exe
     - name: Modify pref.ini
       run: |
-        sudo cp -rf files/* subconverter/
+        sed -i 's/api_mode=false/api_mode=true/g' subconverter/pref.ini
+        sed -i 's/managed_config_prefix=http:\/\/127.0.0.1:25500/managed_config_prefix=https:\/\/sub-beta.now.sh/g' subconverter/pref.ini
+        sed -i 's/async_fetch_ruleset=false/async_fetch_ruleset=true/g' subconverter/pref.ini
+        sed -i 's/max_concurrent_threads=./max_concurrent_threads=1/g' subconverter/pref.ini
     - name: Add & Commit
       uses: EndBug/add-and-commit@v4.4.0
       with:
         author_name: GitHub Action
         author_email: noreply@github.com
-        message: "Update subconverter"
+        message: ${{ github.event.inputs.message }}
         add: "-A"
       env:
         GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }} 
