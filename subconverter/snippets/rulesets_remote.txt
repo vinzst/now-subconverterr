@@ -1,12 +1,15 @@
-⛔️ 广告拦截,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Advertising.list
-🚫 运营劫持,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Hijacking.list
-🌌 YouTube,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Media/YouTube.list
-🎥 NETFLIX,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Media/Netflix.list
-HBO,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Media/HBO.list
-Fox,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Media/Fox.list
-🌍 国外媒体,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/GlobalMedia.list
-🌏 港台媒体,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/HKMTMedia.list
-📲 电报信息,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Telegram.list
-🔰 节点选择,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Global.list
-🍎 苹果服务,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Apple.list
-DIRECT,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/China.list
+surge_ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list,86400
+surge_ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list,86400
+surge_ruleset=REJECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list,86400
+surge_ruleset=REJECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list,86400
+surge_ruleset=节点选择,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list,86400
+surge_ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list,86400
+surge_ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list,86400
+surge_ruleset=节点选择,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list,86400
+surge_ruleset=节点选择,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list,86400
+surge_ruleset=节点选择,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list,86400
+surge_ruleset=节点选择,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list,86400
+surge_ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list,86400
+surge_ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list,86400
+surge_ruleset=DIRECT,[]GEOIP,CN
+surge_ruleset=节点选择,[]FINAL
